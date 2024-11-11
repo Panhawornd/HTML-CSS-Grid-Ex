@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunk's Low Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/46f8b634df.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year','Air jordan','Samba'],
+          ['OCT 1',  80, 90],
+          ['OCT 5',  90, 100],
+          ['OCT 10',  110, 105],
+          ['OCT 15',  180, 110],
+        ]);
+
+        var options = {
+          title: 'Sneakers Price',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="left-nav"> Dunk's Low </div>
+            <div class="center-nav"> 
+                <p class="dash">Dashboard</p>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search" aria-label="Search">
+            </div>
+            <div class="right-nav"> Log Out </div>
+        </div>
+        <div class="content-container">
+            <div class="left-section">
+                <div class="category">
+                    <div class="cate1"><i class="fa-solid fa-table-columns"></i>Dashboard</div>
+                    <div class="cate2"><i class="fa-solid fa-shoe-prints"></i>Shoes</div>
+                    <div class="cate3"><i class="fa-solid fa-square-poll-horizontal"></i>Transaction</div>
+                    <div class="cate4"><i class="fa-regular fa-user"></i>User</div>
+                    <div class="cate5"><i class="fa-solid fa-newspaper"></i>Resources</div>
+                    <div class="cate6"><i class="fa-solid fa-chart-pie"></i>Report</div>
+                    <div class="cate7"><i class="fa-regular fa-message"></i>Customer Review</div>
+                    <div class="cate8"><i class="fa-solid fa-gear"></i>Settings</div>
+                    <div class="latest-shoes">
+                        <p>Purchase the latest Dunks</p>
+                        <button>Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mid-section">
+                <div class="center-content">
+                    <div class="content">
+                        <p class="p1">Welcome Back to our Website</p>
+                        <p class="p2">You've earned our customer badge</p>
+                    </div>
+                    <div class="contents">
+                        <div class="content1">
+                            <div class="c1">
+                                <p id="p1">NIKE MEN'S DUNKS</p>
+                                <p id="p2">Air Jordan</p>
+                                <p id="p3">180$</p>
+                                <p id="p4">Sold 30 pairs Available 20</p>
+                                <img src="R.jpg" height="120">
+                            </div>
+                            <div class="c2">
+                                <p id="p1">ADIDAS MEN'S SHOES</p>
+                                <p id="p2">Adidas Samba</p>
+                                <p id="p3">110$</p>
+                                <p id="p4">Sold 20pairs Available 30</p>
+                                <img src="download.webp" height="160">
+                            </div>
+                        </div>
+                        <div class="content2">
+                            <div id="curve_chart" style="width: 400px; height: 400px"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="right-content">
+                    <div class="prof">Profile</div>
+                    <div><i class="fa-solid fa-user"></i></div>
+                    <p>Phan Panhawornd</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
